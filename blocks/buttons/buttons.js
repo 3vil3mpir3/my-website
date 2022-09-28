@@ -1,3 +1,4 @@
+alert('test');
 export function decorateButtons(element) {
     element.querySelectorAll('a').forEach((a) => {
       a.title = a.title || a.textContent;
