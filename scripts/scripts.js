@@ -16,7 +16,7 @@
  * @param {Object} data additional data for RUM sample
  */
 
-export function sampleRUM(checkpoint, data = {}) {
+ export function sampleRUM(checkpoint, data = {}) {
   sampleRUM.defer = sampleRUM.defer || [];
   const defer = (fnname) => {
     sampleRUM[fnname] = sampleRUM[fnname]
@@ -285,7 +285,9 @@ export function decorateSections($main) {
         if (key === 'style') {
           const styles = meta.style.split(',').map((style) => toClassName(style.trim()));
           styles.forEach((style) => section.classList.add(style));
-        } else section.dataset[toCamelCase(key)] = meta[key];
+        } else {
+          section.dataset[toCamelCase(key)] = meta[key];
+        }
       });
       sectionMeta.remove();
     }
