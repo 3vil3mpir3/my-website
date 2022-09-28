@@ -30,6 +30,12 @@ a.button:any-link, button {
     cursor: unset;
   }
   
+  a.button.brian, button.brian {
+    background-color: #e00122;
+    border: 2px solid currentcolor;
+    color: var(--text-color)
+  } 
+
   a.button.secondary, button.secondary {
     background-color: unset;
     border: 2px solid currentcolor;
