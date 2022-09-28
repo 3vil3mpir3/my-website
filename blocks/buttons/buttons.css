@@ -38,6 +38,6 @@ a.button:any-link, button {
 
   a.button.secondary, button.secondary {
     background-color: unset;
-    border: 2px solid #e00122;
+    border: 2px solid #e00122; !important
     color: var(--text-color)
   } 
